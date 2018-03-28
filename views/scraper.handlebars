@@ -1,0 +1,12 @@
+<div> updated  {{#each data}}
+  {{this.total_records}}
+  {{/each}}
+</div>>
+
+
+<div class="alert alert-{{type}} alert-dismissible" role="alert">
+    {{#if dismissable}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    {{/if}}
+    {{message}}
+</div>

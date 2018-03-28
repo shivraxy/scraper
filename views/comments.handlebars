@@ -1,0 +1,54 @@
+ <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/"><img src="../../assets/images/karma.jpg" id="logo"> </a>
+      </div>
+      
+      <span id="profilename" style="color:white;">Welcome Guest</span>
+      <button style ="background-color:black;color:white" id ="signout"> Sign Out</button>
+      <a class="js-tooltip js-dynamic-tooltip" data-placement="bottom" href="/about" target="_blank" data-component-context="about_nav" data-nav="about" rel="noopener" data-original-title="">
+        <span class="text"><div class="g-signin2" data-onsuccess="onSignIn"></div> </span>
+      </a>
+      
+</nav>
+
+<div class="mainblock">
+<div class="container firstblock">
+  
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 row1" style ="padding:2%;">
+    <div class = "newTrending"> Comments </div>
+    <br>
+{{!-- All the new messages from DB should appear here --}}
+
+{{#each data.results2}}
+
+Cheer for 
+   <span style="color: #2FC2EF;font-size:15px;" >{{this.peer_name}} 
+<img style="float:left;"src={{this.image}}>
+</span>
+     <p style="font-size:10px;margin-bottom:1%"> {{this.text}} ...</p>
+     <p style="color:grey;font-style: italic">-{{this.name}}</p>
+<div id="hidethissh" value={{this.activity_id}}></div>
+{{/each}}
+
+<ul id="commentul" style="max-height: 300px;white-space: nowrap;width:1000px;list-style:none;padding:1%;margin-top:10%">
+
+  {{#each data.results1}}
+  
+   <li class="commentli" style="display: list-item; border-color:rgb(240, 237, 237);border-style:solid; border-top-width:0px;border-right-width:0px;border-left-width:0px;">    
+     <p style="font-size:10px;margin-bottom:1%"> {{this.comment}} ...</p>
+     <p style="color:grey;font-style: italic">-{{this.name}}</p>
+</li>
+
+  {{/each}}
+<li class="commentli" style="display: list-item; border-color:rgb(240, 237, 237);border-style:solid; border-top-width:0px;border-right-width:0px;border-left-width:0px;">    
+    <textarea placeholder="Cheers for Peers..." class="form-control" id="comment" rows="5" style="width:400px;"></textarea>
+<button type="submit" id ="addNewComment" class="btn btn-dark">Add Comment</button>
+<button type="submit" id ="addVote" class="btn btn-dark">Vote</button>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>

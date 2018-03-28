@@ -1,0 +1,91 @@
+body {
+    background: #e6ecf0;
+    color: #14171a;
+    font-size: 14px;
+    line-height: 20px;
+    overflow-y: scroll;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.navbar {
+    background: black;
+}
+
+#logo {
+    width: 180px;
+    height: 50px;
+}
+
+li {
+    display: inline-block;
+}
+
+ul {
+    /* z-index: 9999; */
+    position: absolute;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+div {
+    display: block;
+}
+
+.newTrending {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mainblock {
+    padding-top: 100px;
+}
+
+.firstblock {
+    padding-left: 10px;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+img {
+    width: 120px;
+    height: 100px;
+    float: right;
+    padding-top: 2px;
+}
+
+a {
+    color: black;
+    font-style: unset;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.row1 {
+    border-style: solid;
+    border-color: white;
+    height: 700px;
+    width: 800px;
+    display: block;
+    background-color: #fff;
+    background-clip: inherit;
+    border: 1px solid #f8fafc;
+    line-height: inherit;
+    padding: 15px;
+    padding-bottom: 0px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    padding-left: 0px;
+    border-right-width: 0px;
+    padding-right: 0px;
+}
+
+.leftlist:hover {
+    background-color: rgb(236, 236, 245);
+}

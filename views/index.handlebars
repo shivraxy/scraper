@@ -1,0 +1,55 @@
+ <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+        <button type="submit" id ="scrape" class="btn btn-primary">Scrape</button>
+        
+        </a>
+      </div>
+      <a class="js-tooltip js-dynamic-tooltip" data-placement="bottom" href="/about" target="_blank" data-component-context="about_nav" data-nav="about" rel="noopener" data-original-title="">
+      </a>
+</nav>
+
+<div class="mainblock">
+<div class="container firstblock">
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-4 row1" style ="padding:2%;">
+    <div class = "newTrending"> News Headlines </div>
+    <br>
+ <ul style="list-style: none;padding:1%;margin:0%">
+  {{#each data}}
+   <li class="leftlist" style="display: list-item; border-color:rgb(240, 237, 237);border-style:solid; border-top-width:0px;border-right-width:0px;border-left-width:0px;">
+   <span style="color: #2FC2EF;font-size:15px;" >
+
+<button data={{this._id}} type="button" class="close" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+
+
+{{this.title}}
+</span>
+<p style="font-size:10px;margin-bottom:1%"> {{this.title}} ...</p>
+</li>
+</a>
+  {{/each}}
+</ul>
+
+{{!-- 
+</div>
+<div class="col-xs-12 col-sm-4 col-md-5">
+
+<form>
+<div class="form-group">
+<p> <input class="form-control" id ="name" type="text" placeholder="Name" style="width:200px;"> </p>
+<p>  <textarea placeholder="Image Link" class="form-control" id="image" rows="1" cols="60" style="width:400px;"></textarea> </p>
+<textarea placeholder="Cheers for Peers..." class="form-control" id="message" rows="5" style="width:400px;"></textarea>
+</div>
+
+<button type="submit" id ="addNew" class="btn btn-dark">Submit</button>
+</form>
+
+
+
+</div>
+</div>
+</div>
+</div> --}}
